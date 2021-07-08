@@ -1,0 +1,5 @@
+classes = 5
+train  = ../train_data/night/train.txt
+valid  = ../train_data/daynight/test.txt
+names = obj.names
+backup = model_night_v3/   

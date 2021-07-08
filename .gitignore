@@ -62,3 +62,9 @@ uselib
 uselib_track
 darknet
 vcpkg/
+
+__pycache__/
+model/
+logfile/**
+test/
+data/

@@ -6,7 +6,6 @@ import darknet
 import time
 import cv2
 import numpy as np
-import darknet
 
 
 def parser():
@@ -189,7 +188,6 @@ def batch_detection_example():
         cv2.imwrite(name.replace("data/", ""), image)
     print(detections)
 
-
 def main():
     args = parser()
     check_arguments_errors(args)
@@ -202,34 +200,35 @@ def main():
         batch_size=args.batch_size
     )
 
-    images = load_images(args.input)
+    # images = load_images(args.input)
 
-    index = 0
-    while True:
-        # loop asking for new image paths if no list is given
-        if args.input:
-            if index >= len(images):
-                break
-            image_name = images[index]
-        else:
-            image_name = input("Enter Image Path: ")
-        prev_time = time.time()
-        image, detections = image_detection(
-            image_name, network, class_names, class_colors, args.thresh
-            )
-        if args.save_labels:
-            save_annotations(image_name, image, detections, class_names)
-        darknet.print_detections(detections, args.ext_output)
-        fps = int(1/(time.time() - prev_time))
-        print("FPS: {}".format(fps))
-        if not args.dont_show:
-            cv2.imshow('Inference', image)
-            if cv2.waitKey() & 0xFF == ord('q'):
-                break
-        index += 1
+    # index = 0
+    # while True:
+    #     # loop asking for new image paths if no list is given
+    #     if args.input:
+    #         if index >= len(images):
+    #             break
+    #         image_name = images[index]
+    #     else:
+    #         image_name = input("Enter Image Path: ")
+    #     prev_time = time.time()
+    #     image, detections = image_detection(
+    #         image_name, network, class_names, class_colors, args.thresh
+    #         )
+    #     if args.save_labels:
+    #         save_annotations(image_name, image, detections, class_names)
+    #     darknet.print_detections(detections, args.ext_output)
+    #     fps = int(1/(time.time() - prev_time))
+    #     print("FPS: {}".format(fps))
+    #     if not args.dont_show:
+    #         cv2.imshow('Inference', image)
+    #         if cv2.waitKey() & 0xFF == ord('q'):
+    #             break
+    #     index += 1
 
 
 if __name__ == "__main__":
     # unconmment next line for an example of batch processing
     # batch_detection_example()
     main()
+    # load()
