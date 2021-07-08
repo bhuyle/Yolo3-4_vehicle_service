@@ -12,7 +12,6 @@ start_time = time.time()
 url = 'http://0.0.0.0:5002/predict'
 # url = 'http://service.aiclub.cs.uit.edu.vn/face_anti_spoofing/predict/'
 ####################################
-image_path = "../train_data/day/test/cam_09_206.jpg"
 image_path = "output/test.jpg"
 ####################################
 img = cv2.imread(image_path)
