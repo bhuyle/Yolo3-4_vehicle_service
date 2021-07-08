@@ -68,3 +68,8 @@ model/
 logfile/**
 test/
 data/
+*.sh
+results/
+.nfs0000000004081f0e00000186
+.travis.yml
+LICENSE

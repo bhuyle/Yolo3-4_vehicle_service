@@ -10,7 +10,9 @@ cd Yolo_vehicle_service
 python3 service.py
 ``` 
 ## TEST
+``` 
 python3 test.py
+``` 
 ## config 
 * SERVICE_IP: "0.0.0.0"
 * PORT: 5002
