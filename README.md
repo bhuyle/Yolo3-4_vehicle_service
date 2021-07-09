@@ -7,6 +7,8 @@ docker pull lbh129/service_yolo:latest
 ```bash
 git clone https://github.com/bhuyle/Yolo_vehicle_service.git
 cd Yolo_vehicle_service
+make clean
+make
 python3 service.py
 ``` 
 ## TEST
